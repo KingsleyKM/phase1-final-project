@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("https://cataas.com/cat?json=true")
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+           // console.log(data)
             //display the image on the page
             let imageDiv = document.createElement("div")
             imageDiv.className = "images"
@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch("https://cataas.com/cat?type=gif&json=true")
             .then(res => res.json())
             .then(gifs => {
+                console.log(gifs)
                 document.querySelector(".image1").innerHTML = ``
                 let gifsDiv = document.createElement("div")
                 gifsDiv.className = `replacer`
@@ -51,20 +52,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     //fetch the tags from the public API
    // function imageTag(){
-    fetch("https://cataas.com/api/tags")
+    
+    fetch("https://cataas.com/cat?json=true")
     .then(res => res.json())
     .then(element=> {
         console.log(element)
         const val = document.querySelector("input").value;
-        console.log(val)
-        console.log(element.tag)
+        let tagsArray = element
+        // if(tagsArray.filter((name) => name.includes(val))){
+        //     console.log(val)
+        // }
+        // else{
+        //    console.error("error")
+        // }
+        // const val = document.querySelector("input").value;
+        //console.log(val)
+       // console.log(element.tag)
         document.getElementById("tag").addEventListener("click",()=>{
            document.querySelector(".image1").innerHTML=``
            let tagDiv = document.createElement("div")
-           tagDiv.className="tagsList"
+           tagDiv.className="tagsList"  
            tagDiv.innerHTML=`
-           <img src= "https://cataas.com/cat/cute">
-           `
+           <img src="https://cataas.com/${element.url}">
+           `         
            document.querySelector(".image1").appendChild(tagDiv)
         })
     })
