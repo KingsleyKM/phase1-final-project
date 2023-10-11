@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 imageDiv2.className = `replacer`
                 imageDiv2.innerHTML = `
         <img src="https://cataas.com/${element.url}">
+        <p id="p-Id"> Tags : ${element.tags}</p>
         `
                 document.querySelector(".image1").appendChild(imageDiv2)
             })
@@ -52,30 +53,43 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     //fetch the tags from the public API
    // function imageTag(){
-    
-    fetch("https://cataas.com/cat?json=true")
-    .then(res => res.json())
-    .then(element=> {
-        console.log(element)
-        const val = document.querySelector("input").value;
-        let tagsArray = element
-        // if(tagsArray.filter((name) => name.includes(val))){
-        //     console.log(val)
-        // }
-        // else{
-        //    console.error("error")
-        // }
-        // const val = document.querySelector("input").value;
-        //console.log(val)
-       // console.log(element.tag)
-        document.getElementById("tag").addEventListener("click",()=>{
-           document.querySelector(".image1").innerHTML=``
-           let tagDiv = document.createElement("div")
-           tagDiv.className="tagsList"  
-           tagDiv.innerHTML=`
-           <img src="https://cataas.com/${element.url}">
-           `         
-           document.querySelector(".image1").appendChild(tagDiv)
-        })
+    document.querySelector(".tag").addEventListener("click",()=> {
+        imageTag();
     })
+//     function imageTag(){
+//         fetch("https://cataas.com/cat?json=true")
+//         .then(response => response.json())
+//         .then(tags => {
+//          //console.log(tags)
+//          const val = document.querySelector("input").value
+//          let tagsValue = tags.tags
+//          console.log(tagsValue)
+//         if(tagsValue === val){
+//             function tagsImage(){
+//                 document.querySelector(".image1").innerHTML = ``
+//                 let gifsDiv = document.createElement("div")
+//                 gifsDiv.className = `replacer`
+//                 gifsDiv.innerHTML = `
+//                <img src="https://cataas.com/cat/${tags.url}">
+//                `
+//                 document.querySelector(".image1").appendChild(gifsDiv)
+//             }
+//        }
+//        else{
+//         console.error("Error found")
+//        }
+
+        
+//         })
+
+//     }
+//     function tagsImage(){
+//         document.querySelector(".image1").innerHTML = ``
+//         let gifsDiv = document.createElement("div")
+//         gifsDiv.className = `replacer`
+//         gifsDiv.innerHTML = `
+//        <img src="https://cataas.com/cat/${tags.url}">
+//        `
+//         document.querySelector(".image1").appendChild(gifsDiv)
+//     }
 })
