@@ -60,26 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch("https://cataas.com/cat?json=true")
         .then(response => response.json())
         .then(tags => {
-         //console.log(tags)
-         const val = document.querySelector("input").value
-         let tagsValue = tags.tags
-         console.log(tagsValue)
-        if(tagsValue === val){
-            function tagsImage(){
+         //console.log(tags)        
                 document.querySelector(".image1").innerHTML = ``
                 let gifsDiv = document.createElement("div")
                 gifsDiv.className = `replacer`
                 gifsDiv.innerHTML = `
-               <img src="https://cataas.com/cat/${tags.url}">
+               <img src="https://cataas.com/cat/cute">
                `
                 document.querySelector(".image1").appendChild(gifsDiv)
             }
-       }
-       else{
-        console.error("Error found")
-       } 
-        })
-    }
+      
+        )
+    
     // function tagsImage(){
     //     document.querySelector(".image1").innerHTML = ``
     //     let gifsDiv = document.createElement("div")
@@ -96,18 +88,62 @@ document.addEventListener("DOMContentLoaded", () => {
     
       let username = document.getElementById("username");
       let password = document.getElementById("password");
+      let amount = document.getElementById("donate");
     
       if (username.value == "" || password.value == "") {
         alert("Ensure you input a value in both fields!");
       } else {
         // perform operation with form input
-        alert("login successful");
+        alert("Thank you for your donation");
         console.log(
-          `This form has a username of ${username.value} and password of ${password.value}`
+          `This form has a username of ${username.value} and password of ${password.value} and donation amount = ${amount.value}`
         );
     
         username.value = "";
         password.value = "";
-      }
-    });
-})
+        amount.value = ""
+      } 
+    })
+    //fetch the tags from the public API
+    document.querySelector(".tag1").addEventListener("click",()=> {
+        imageTag();;
+    })
+    document.querySelector(".tag2").addEventListener("click",()=> {
+        changeButton();
+    })
+    document.querySelector(".tag3").addEventListener("click",()=> {
+        changeButton();
+    })
+        fetch("https://cataas.com/cat?json=true")
+        .then(response => response.json())
+        .then(tags => {
+         console.log(tags)
+         const val = [`${document.querySelector("input").value}`]
+         let tagsValue = tags.tags
+         console.log(tagsValue)
+        if(tagsValue === val){
+                document.querySelector(".image1").innerHTML = ``
+                let gifsDiv = document.createElement("div")
+                gifsDiv.className = `replacer`
+                gifsDiv.innerHTML = `
+               <img src="https://cataas.com/cat/${tags.url}">
+               `
+                document.querySelector(".image1").appendChild(gifsDiv)
+            
+       }
+    //    else{
+    //     console.error("Error found")
+    //    }
+        })
+
+    
+    function tagsImage(){
+        document.querySelector(".image1").innerHTML = ``
+        let gifsDiv = document.createElement("div")
+        gifsDiv.className = `replacer`
+        gifsDiv.innerHTML = `
+       <img src="https://cataas.com/cat/${tags.url}">
+       `
+        document.querySelector(".image1").appendChild(gifsDiv)
+    };
+}})

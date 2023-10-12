@@ -1,0 +1,49 @@
+//fetch the tags from the public API
+   // function imageTag(){
+    // document.querySelector(".tag").addEventListener("click",()=> {
+    //     imageTag();
+    // })
+//     function imageTag(){
+//         fetch("https://cataas.com/cat?json=true")
+//         .then(response => response.json())
+//         .then(tags => {
+//          //console.log(tags)
+//          const val = document.querySelector("input").value
+//          let tagsValue = tags.tags
+//          console.log(tagsValue)
+//         if(tagsValue === val){
+//             function tagsImage(){
+//                 document.querySelector(".image1").innerHTML = ``
+//                 let gifsDiv = document.createElement("div")
+//                 gifsDiv.className = `replacer`
+//                 gifsDiv.innerHTML = `
+//                <img src="https://cataas.com/cat/${tags.url}">
+//                `
+//                 document.querySelector(".image1").appendChild(gifsDiv)
+//             }
+//        }
+//        else{
+//         console.error("Error found")
+//        }
+//         })
+
+//     }
+//     function tagsImage(){
+//         document.querySelector(".image1").innerHTML = ``
+//         let gifsDiv = document.createElement("div")
+//         gifsDiv.className = `replacer`
+//         gifsDiv.innerHTML = `
+//        <img src="https://cataas.com/cat/${tags.url}">
+//        `
+//         document.querySelector(".image1").appendChild(gifsDiv)
+//     }function likeSeason(event) {
+    const likeButton = event.target;
+    const likeSpan = likeButton.parentElement.querySelector('span');
+    if (likeSpan) {
+        const currentLikes = parseInt(likeSpan.getAttribute('data-likes'));
+        const seasonIndex = parseInt(likeSpan.id.split('-')[1]);
+
+        if (likeButton.textContent === '♡') {
+            likeButton.textContent = '♥';
+            likeButton.classList.add('clicked');
+            likeSpan.textCo
