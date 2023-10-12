@@ -47,3 +47,28 @@
             likeButton.textContent = '♥';
             likeButton.classList.add('clicked');
             likeSpan.textCo
+
+
+            let loginForm = document.getElementById("loginForm");
+
+            loginForm.addEventListener("submit", (e) => {
+              e.preventDefault();
+            
+              let username = document.getElementById("username");
+              let password = document.getElementById("password");
+              let amount = document.getElementById("donate");
+            
+              if (username.value == "" || password.value == "") {
+                alert("Ensure you input a value in both fields!");
+              } else {
+                // perform operation with form input
+                alert("Thank you for your donation");
+                console.log(
+                  `This form has a username of ${username.value} and password of ${password.value} and donation amount = ${amount.value}`
+                );
+            
+                username.value = "";
+                password.value = "";
+                amount.value = ""
+              } 
+            })

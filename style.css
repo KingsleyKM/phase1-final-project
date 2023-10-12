@@ -7,7 +7,7 @@ h2{
     color: aqua;
 }
 body{
-    background-color: beige;
+    background-color: lightgrey;
 }
 .wrapper{
     width: 80vmin;
@@ -44,4 +44,8 @@ button{
 }
 h3{
     color: orange;
+}
+input{
+    background-color: beige;
+    text-decoration-color: black;
 }
