@@ -78,5 +78,6 @@ textarea{
     height: 30px;
 }
 select{
+    background-color: beige;
     margin-top: 8px;
 }
