@@ -51,38 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             });
     }
-    //fetch the tags from the public API
-   // function imageTag(){
-    // document.querySelector(".tag").addEventListener("click",()=> {
-    //     imageTag();
-    // })
-    // function imageTag(){
-    //     fetch("https://cataas.com/cat?json=true")
-    //     .then(response => response.json())
-    //     .then(tags => {
-    //      //console.log(tags)        
-    //             document.querySelector(".image1").innerHTML = ``
-    //             let gifsDiv = document.createElement("div")
-    //             gifsDiv.className = `replacer`
-    //             gifsDiv.innerHTML = `
-    //            <img src="https://cataas.com/cat/cute">
-    //            `
-    //             document.querySelector(".image1").appendChild(gifsDiv)
-    //         }
-      
-    //     )
-    
-    // function tagsImage(){
-    //     document.querySelector(".image1").innerHTML = ``
-    //     let gifsDiv = document.createElement("div")
-    //     gifsDiv.className = `replacer`
-    //     gifsDiv.innerHTML = `
-    //    <img src="https://cataas.com/cat/${tags.url}">
-    //    `
-    //     document.querySelector(".image1").appendChild(gifsDiv)
-    // }
-
-
     //donation form 
     let loginForm = document.getElementById("loginForm");
 
@@ -107,44 +75,4 @@ document.addEventListener("DOMContentLoaded", () => {
         amount.value = ""
       } 
     })
-    
-    //fetch the tags from the public API
-    // document.querySelector(".tag1").addEventListener("click",()=> {
-    //     imageTag();;
-    // })
-    // document.querySelector(".tag2").addEventListener("click",()=> {
-    //     changeButton();
-    // })
-    // document.querySelector(".tag3").addEventListener("click",()=> {
-    //     changeButton();
-    // })
-        fetch("https://cataas.com/cat?json=true")
-        .then(response => response.json())
-        .then(tags => {
-         console.log(tags)
-         const val = [`${document.querySelector("input").value}`]
-         let tagsValue = tags.tags
-         console.log(tagsValue)
-        if(tagsValue === val){
-                document.querySelector(".image1").innerHTML = ``
-                let gifsDiv = document.createElement("div")
-                gifsDiv.className = `replacer`
-                gifsDiv.innerHTML = `
-               <img src="https://cataas.com/cat/${tags.url}">
-               `
-                document.querySelector(".image1").appendChild(gifsDiv)
-            
-       }
-        })
-
-    
-    // function tagsImage(){
-    //     document.querySelector(".image1").innerHTML = ``
-    //     let gifsDiv = document.createElement("div")
-    //     gifsDiv.className = `replacer`
-    //     gifsDiv.innerHTML = `
-    //    <img src="https://cataas.com/cat/${tags.url}">
-    //    `
-    //     document.querySelector(".image1").appendChild(gifsDiv)
-    // };
-})
+    })
