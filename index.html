@@ -41,22 +41,30 @@
         <button class="tag">Search</button>
         <input  id="size" type="text"  placeholder="cat size">
         <button class="tag">Search</button> -->
-        <div class="container">
+        <div class="containers">
             <form action="" id="loginForm">
               <h1>Donate</h1>
               <input type="text" id="username" class="form-control" placeholder="Enter your Username...">
               <input type="password" id="password" class="form-control" placeholder="Enter your Password...">
               <input type="text" id="donate" class="form-control" placeholder="Enter Amount..." maxlength="5">
-              <button type="submit">Submit</button>
+              <button  id="logs" type="submit">Submit</button>
             </form>
           </div>
           <p>""</p>
-        <div class="comments">
-            <form action="" id="comments">
-                <button id="comment-adding">Add comment</button>
-                <input id="comments" type="text" placeholder="Add comments">
-            </form>
-        </div> 
+          <div class="container">
+            <h2>Leave Us a Comment</h2>
+            <form><textarea placeholder='Username' id ="userName" name="name"></textarea> 
+               <div class="btn">
+            
+            <textarea placeholder='Add your comment' id ="userComment"  name="comment"></textarea>
+                  
+      
+                       <input id="submit"  type="button" onclick="myFunction()" value="Submit">
+                       <button>Cancel</button>
+                 </div></form> 
+
+<p id="data"></p></div>
+<script src="plugin.js" ></script>
    
 </div>
     

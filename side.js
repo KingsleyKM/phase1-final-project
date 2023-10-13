@@ -104,16 +104,17 @@ document.addEventListener("DOMContentLoaded", () => {
         amount.value = ""
       } 
     })
+    
     //fetch the tags from the public API
-    document.querySelector(".tag1").addEventListener("click",()=> {
-        imageTag();;
-    })
-    document.querySelector(".tag2").addEventListener("click",()=> {
-        changeButton();
-    })
-    document.querySelector(".tag3").addEventListener("click",()=> {
-        changeButton();
-    })
+    // document.querySelector(".tag1").addEventListener("click",()=> {
+    //     imageTag();;
+    // })
+    // document.querySelector(".tag2").addEventListener("click",()=> {
+    //     changeButton();
+    // })
+    // document.querySelector(".tag3").addEventListener("click",()=> {
+    //     changeButton();
+    // })
         fetch("https://cataas.com/cat?json=true")
         .then(response => response.json())
         .then(tags => {
