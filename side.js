@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector(".image1").innerHTML = ``
                 let imageDiv2 = document.createElement("div")
                 imageDiv2.className = `replacer`
+                // inerpolating the image url and its tag into the link and text
                 imageDiv2.innerHTML = `
         <img src="https://cataas.com/${element.url}">
         <p id="p-Id"> Tags : ${element.tags}</p>
