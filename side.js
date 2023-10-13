@@ -56,21 +56,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // document.querySelector(".tag").addEventListener("click",()=> {
     //     imageTag();
     // })
-    function imageTag(){
-        fetch("https://cataas.com/cat?json=true")
-        .then(response => response.json())
-        .then(tags => {
-         //console.log(tags)        
-                document.querySelector(".image1").innerHTML = ``
-                let gifsDiv = document.createElement("div")
-                gifsDiv.className = `replacer`
-                gifsDiv.innerHTML = `
-               <img src="https://cataas.com/cat/cute">
-               `
-                document.querySelector(".image1").appendChild(gifsDiv)
-            }
+    // function imageTag(){
+    //     fetch("https://cataas.com/cat?json=true")
+    //     .then(response => response.json())
+    //     .then(tags => {
+    //      //console.log(tags)        
+    //             document.querySelector(".image1").innerHTML = ``
+    //             let gifsDiv = document.createElement("div")
+    //             gifsDiv.className = `replacer`
+    //             gifsDiv.innerHTML = `
+    //            <img src="https://cataas.com/cat/cute">
+    //            `
+    //             document.querySelector(".image1").appendChild(gifsDiv)
+    //         }
       
-        )
+    //     )
     
     // function tagsImage(){
     //     document.querySelector(".image1").innerHTML = ``
@@ -81,6 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
     //    `
     //     document.querySelector(".image1").appendChild(gifsDiv)
     // }
+
+
+    //donation form 
     let loginForm = document.getElementById("loginForm");
 
     loginForm.addEventListener("submit", (e) => {
@@ -94,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Ensure you input a value in both fields!");
       } else {
         // perform operation with form input
-        alert("Thank you for your donation");
+        alert("Thank you for your donation 💕");
         console.log(
           `This form has a username of ${username.value} and password of ${password.value} and donation amount = ${amount.value}`
         );
@@ -132,19 +135,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector(".image1").appendChild(gifsDiv)
             
        }
-    //    else{
-    //     console.error("Error found")
-    //    }
         })
 
     
-    function tagsImage(){
-        document.querySelector(".image1").innerHTML = ``
-        let gifsDiv = document.createElement("div")
-        gifsDiv.className = `replacer`
-        gifsDiv.innerHTML = `
-       <img src="https://cataas.com/cat/${tags.url}">
-       `
-        document.querySelector(".image1").appendChild(gifsDiv)
-    };
-}})
+    // function tagsImage(){
+    //     document.querySelector(".image1").innerHTML = ``
+    //     let gifsDiv = document.createElement("div")
+    //     gifsDiv.className = `replacer`
+    //     gifsDiv.innerHTML = `
+    //    <img src="https://cataas.com/cat/${tags.url}">
+    //    `
+    //     document.querySelector(".image1").appendChild(gifsDiv)
+    // };
+})

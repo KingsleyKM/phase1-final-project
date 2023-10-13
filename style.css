@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 h2{
+    font-family: cursive;
     color: aqua;
 }
 body{
@@ -19,7 +20,7 @@ body{
     left: 50%;
     border-radius: 5px;
     box-shadow: 20px 20px 40px rgba(97,63,0,0,4);
-}
+} */
 span{
     display: block;
     text-align: center;
@@ -27,6 +28,7 @@ span{
 }
 h1{
     color:orange;
+    font-family: cursive;
 }
 img {
     max-width: 80%;
@@ -37,7 +39,8 @@ button{
     background-color: orange;
     border: none;
     padding: 5px;
-    color: black;   
+    color: black;  
+
 }
 #p-Id{
     color: aqua;
@@ -48,13 +51,29 @@ h3{
 input{
     background-color: beige;
     text-decoration-color: black;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    margin-top: 8px;
 }
 p{
     color: black;
 }
 #data {
-    width: 40%;
+    width: 100%;
     height: 150px;
     padding: 10px;
     background-color: #d0e2bc;
-  }
+    border-style:solid ;
+    border-color: blue;
+
+  } 
+textarea{
+    background-color: beige;
+    padding-top: 8px;
+    
+}
+select{
+    margin-top: 8px;
+}
