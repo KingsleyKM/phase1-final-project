@@ -10,3 +10,4 @@ Then after that i added a donation button that can donate money to our creater i
 
 I also added another form with will be for the comment section. I has a username area and an add comment are where you have to fill in both section to add a comment. Submitting the form without filling both of the area an alert will pop up requesting you to fill , when both are filled you comment will be added to the comment section below the button. There is a cancel button which  will remove you added comment if you choose to delete the comment you have added.
 
+On the styling of the page i wanted it to be all at the center of the screen . Leaving spaces on each side to be able to see the background image. I was going with a darker shade of colour to make it easy on the eyes so that you can enjoy the cat images without the strain. 
