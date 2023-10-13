@@ -8,8 +8,10 @@ h2{
     color: aqua;
 }
 body{
-    background-color: lightgrey;
+  background-color: orange;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/002/683/792/large_2x/halloween-background-with-cat-in-the-dark-field-vector.jpg");
 }
+
 .wrapper{
     width: 80vmin;
     padding: 50px 40px;
